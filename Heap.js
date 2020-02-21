@@ -4,7 +4,7 @@ var Heap = (function(){
     }
     function reheapUp(self, idx){
         if (idx) {
-            var parent = parseInt((idx -1) /2);
+            var parent = Math.floor((idx -1) /2);
             if (self.arr[idx] > self.arr[parent]){
                 var temp = self.arr[idx];
                 self.arr[idx] = self.arr[parent];

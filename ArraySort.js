@@ -117,7 +117,7 @@ var radixLSD = function(array, d){
     let mod = 10;
     for ( let i = 0; i < d; i++, mod *= 10){
         for (let j = 0; j < array.length; j++){
-            let bucket = parseInt(array[j] % mod);
+            let bucket = Math.floor(array[j] % mod);
             if (counter[bucket] == null ){
                 counter[bucket] = [];
             }
